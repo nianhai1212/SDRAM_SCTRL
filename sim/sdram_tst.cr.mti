@@ -1,0 +1,36 @@
+E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_auto_ref.v {1 {vlog -work work E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_auto_ref.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sdram_auto_ref
+
+Top level modules:
+	sdram_auto_ref
+
+} {} {}} E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/mt48lc16m16a2.v {1 {vlog -work work E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/mt48lc16m16a2.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mt48lc16m16a2
+
+Top level modules:
+	mt48lc16m16a2
+
+} {} {}} E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/sdram_ctrl_top_tst.v {1 {vlog -work work E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/sdram_ctrl_top_tst.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sdram_ctrl_top_tst
+
+Top level modules:
+	sdram_ctrl_top_tst
+
+} {} {}} E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_ctrl_top.v {1 {vlog -work work E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_ctrl_top.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sdram_ctrl_top
+
+Top level modules:
+	sdram_ctrl_top
+
+} {} {}} E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_initialization.v {1 {vlog -work work E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_initialization.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sdram_initialization
+
+Top level modules:
+	sdram_initialization
+
+} {} {}}

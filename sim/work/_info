@@ -1,0 +1,100 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\QuartusII_Pro\e2prom\sim
+vmt48lc16m16a2
+Z1 !s100 kW=a2QB:KUajQomQkFZFg0
+Z2 Igl83W`1Kl2UfQh1]njVLI0
+Z3 VLTPz@MSJ=U7C7?h`_B2h02
+Z4 dE:\QuartusII_Pro\SDRAM_Ctrl_Exe\sim
+Z5 w1085106656
+Z6 8E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/mt48lc16m16a2.v
+Z7 FE:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/mt48lc16m16a2.v
+L0 42
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/mt48lc16m16a2.v|
+Z10 o-work work -O0
+Z11 !s108 1511359544.580000
+Z12 !s107 E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/mt48lc16m16a2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsdram_auto_ref
+Z13 !s100 @6ed8VGVEOQ@38f>>Ag[S3
+Z14 In1i1P=AcG1Q[zP9C0R5Yk0
+Z15 Vdeo5ik4`cOzHezIN2ig?=2
+R4
+Z16 w1511358823
+Z17 8E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_auto_ref.v
+Z18 FE:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_auto_ref.v
+L0 1
+R8
+r1
+31
+Z19 !s90 -reportprogress|300|-work|work|E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_auto_ref.v|
+R10
+!i10b 1
+!s85 0
+Z20 !s108 1511359544.876000
+Z21 !s107 E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_auto_ref.v|
+!s101 -O0
+vsdram_ctrl_top
+Z22 ILBVi3N0gG^A[z?=mM3]zL3
+Z23 Vf>MLJBXX<Bf`EjanFjlW32
+R4
+Z24 w1511359535
+Z25 8E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_ctrl_top.v
+Z26 FE:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_ctrl_top.v
+L0 1
+R8
+r1
+31
+Z27 !s90 -reportprogress|300|-work|work|E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_ctrl_top.v|
+R10
+Z28 !s100 8hTzRf6VV>UZRM0T0Wg8c3
+Z29 !s108 1511359544.741000
+Z30 !s107 E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_ctrl_top.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsdram_ctrl_top_tst
+Z31 !s100 XK@D@C4LmS^M`@8g8?GXK3
+Z32 I_HldHIEH?dloYAX8IWohd3
+Z33 VoOZ:LC6j4h9VBFXjN0gkf0
+R4
+Z34 w1510816845
+Z35 8E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/sdram_ctrl_top_tst.v
+Z36 FE:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/sdram_ctrl_top_tst.v
+L0 2
+R8
+r1
+31
+Z37 !s90 -reportprogress|300|-work|work|E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/sdram_ctrl_top_tst.v|
+R10
+Z38 !s108 1511359544.445000
+Z39 !s107 E:/QuartusII_Pro/SDRAM_Ctrl_Exe/sim/sdram_ctrl_top_tst.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsdram_initialization
+!i10b 1
+Z40 !s100 LkfhDPe_^2dz:oXMGg3FV1
+Z41 I@UXePA<[XHP<]OIo0UKo=3
+Z42 Vl=A`mM9M2>BFNVcDJceUz2
+R4
+Z43 w1511356555
+Z44 8E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_initialization.v
+Z45 FE:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_initialization.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1511359545.036000
+!s107 E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_initialization.v|
+Z46 !s90 -reportprogress|300|-work|work|E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_initialization.v|
+!s101 -O0
+R10

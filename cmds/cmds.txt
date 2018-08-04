@@ -1,0 +1,12 @@
+CMMAND:
+								CS#	   RAS#	   CAS#	   WE#		 DQM		 ADDR		 DQ
+NOP								0		1		1	 	1
+ACTIVE  						0		0		1		1
+READ							0		1		0		1
+WRITE							0		1		0		0
+BURST_TERMINITE					0		1		1		0
+PRICHARGE						0		0		1		0
+AUTO REFRESH or SELF REFRESH	0		0		0		1
+LOAD_MODE_REGISTER				0		0		0		0
+
+MODE_REG : A[12:0] = 0_0000_0010_0010 ; //CL = 2 ;BL = 4 Sequentially	

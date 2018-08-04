@@ -1,0 +1,45 @@
+module sdram_ctrl_top (	sclk	,
+						snrst   ,
+						
+						Dq		, 
+						Addr	, 
+						Ba		, 
+						Clk		, 
+						Cke		, 
+						Cs_n	, 
+						Ras_n	, 
+						Cas_n	, 
+						We_n	, 
+						Dqm
+						);
+	input		  sclk  ;
+	input		  snrst ;
+	output [15:0] Dq	; 
+	output [12:0] Addr	; 
+	output [ 1:0] Ba	; 
+	output Clk		; 
+	output Cke		; 
+	output Cs_n		; 
+	output Ras_n	; 
+	output Cas_n	; 
+	output We_n		; 
+	output [1:0] Dqm ;
+	
+	assign Clk  = ~sclk ;
+	assign Cs_n = ( ~snrst )?1'b1:1'b0 ;
+	
+	wire [3:0] cmd_w ;
+	assign { Cs_n, Ras_n, Cas_n, We_n }= cmd_w ;
+	
+	wire init_done_w ;
+	sdram_initialization sdram_initialization_init(	.sclk		(sclk ),
+													.snrst		(snrst),
+													.cke		(Cke  ),
+													.cmd		(cmd_w),
+													.mod_config	(Addr ),
+													.init_done  (init_done_w)
+													);
+	
+	
+						
+endmodule 

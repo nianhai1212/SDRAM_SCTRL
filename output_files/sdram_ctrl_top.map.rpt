@@ -1,0 +1,375 @@
+Analysis & Synthesis report for sdram_ctrl_top
+Thu Nov 16 22:02:51 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |sdram_ctrl_top|sdram_initialization:sdram_initialization_init|current_state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "sdram_initialization:sdram_initialization_init"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Nov 16 22:02:51 2017       ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                   ; sdram_ctrl_top                              ;
+; Top-level Entity Name           ; sdram_ctrl_top                              ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 30                                          ;
+; Total pins                      ; 41                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI TX Channels          ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA7F31C8        ;                    ;
+; Top-level entity name                                                           ; sdram_ctrl_top     ; sdram_ctrl_top     ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; SRAM_CTRL/sdram_ctrl_top.v       ; yes             ; User Verilog HDL File  ; E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_ctrl_top.v       ;         ;
+; SRAM_CTRL/sdram_initialization.v ; yes             ; User Verilog HDL File  ; E:/QuartusII_Pro/SDRAM_Ctrl_Exe/SRAM_CTRL/sdram_initialization.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 25         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 41         ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 8          ;
+;     -- 5 input functions                    ; 4          ;
+;     -- 4 input functions                    ; 4          ;
+;     -- <=3 input functions                  ; 25         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 30         ;
+;                                             ;            ;
+; I/O pins                                    ; 41         ;
+; Total DSP Blocks                            ; 0          ;
+; Maximum fan-out node                        ; sclk~input ;
+; Maximum fan-out                             ; 31         ;
+; Total fan-out                               ; 308        ;
+; Average fan-out                             ; 2.01       ;
++---------------------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                            ; Library Name ;
++-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------+--------------+
+; |sdram_ctrl_top                                     ; 41 (0)            ; 30 (0)       ; 0                 ; 0          ; 41   ; 0            ; |sdram_ctrl_top                                                ; work         ;
+;    |sdram_initialization:sdram_initialization_init| ; 41 (41)           ; 30 (30)      ; 0                 ; 0          ; 0    ; 0            ; |sdram_ctrl_top|sdram_initialization:sdram_initialization_init ; work         ;
++-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |sdram_ctrl_top|sdram_initialization:sdram_initialization_init|current_state                                                                                         ;
++-------------------------------+----------------------------+-------------------+------------------------+-----------------------+-------------------------------+--------------------+
+; Name                          ; current_state.ST_INIT_DONE ; current_state.LMR ; current_state.AUTO_REF ; current_state.PRECHAR ; current_state.NOP_AFTER_DELAY ; current_state.IDLE ;
++-------------------------------+----------------------------+-------------------+------------------------+-----------------------+-------------------------------+--------------------+
+; current_state.IDLE            ; 0                          ; 0                 ; 0                      ; 0                     ; 0                             ; 0                  ;
+; current_state.NOP_AFTER_DELAY ; 0                          ; 0                 ; 0                      ; 0                     ; 1                             ; 1                  ;
+; current_state.PRECHAR         ; 0                          ; 0                 ; 0                      ; 1                     ; 0                             ; 1                  ;
+; current_state.AUTO_REF        ; 0                          ; 0                 ; 1                      ; 0                     ; 0                             ; 1                  ;
+; current_state.LMR             ; 0                          ; 1                 ; 0                      ; 0                     ; 0                             ; 1                  ;
+; current_state.ST_INIT_DONE    ; 1                          ; 0                 ; 0                      ; 0                     ; 0                             ; 1                  ;
++-------------------------------+----------------------------+-------------------+------------------------+-----------------------+-------------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                    ;
++------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                ; Reason for Removal                     ;
++------------------------------------------------------------------------------+----------------------------------------+
+; sdram_initialization:sdram_initialization_init|cmd[3]                        ; Stuck at GND due to stuck port data_in ;
+; sdram_initialization:sdram_initialization_init|mod_config[0,2..4,6..9,11,12] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 11                                       ;                                        ;
++------------------------------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                             ;
++--------------------------------------------------------------+---------------------------+--------------------------------------------------------------+
+; Register name                                                ; Reason for Removal        ; Registers Removed due to This Register                       ;
++--------------------------------------------------------------+---------------------------+--------------------------------------------------------------+
+; sdram_initialization:sdram_initialization_init|cmd[3]        ; Stuck at GND              ; sdram_initialization:sdram_initialization_init|mod_config[2] ;
+;                                                              ; due to stuck port data_in ;                                                              ;
+; sdram_initialization:sdram_initialization_init|mod_config[9] ; Stuck at GND              ; sdram_initialization:sdram_initialization_init|mod_config[6] ;
+;                                                              ; due to stuck port data_in ;                                                              ;
++--------------------------------------------------------------+---------------------------+--------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 30    ;
+; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 30    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------+
+; Inverted Register Statistics                                    ;
++-------------------------------------------------------+---------+
+; Inverted Register                                     ; Fan out ;
++-------------------------------------------------------+---------+
+; sdram_initialization:sdram_initialization_init|cmd[2] ; 1       ;
+; sdram_initialization:sdram_initialization_init|cmd[1] ; 1       ;
+; sdram_initialization:sdram_initialization_init|cmd[0] ; 1       ;
+; Total number of inverted registers = 3                ;         ;
++-------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 9:1                ; 16 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |sdram_ctrl_top|sdram_initialization:sdram_initialization_init|cnt_cmd[15] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sdram_initialization:sdram_initialization_init"                                          ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; init_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Thu Nov 16 22:02:49 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sdram_ctrl_top -c sdram_ctrl_top
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file sram_ctrl/sdram_ctrl_top.v
+    Info (12023): Found entity 1: sdram_ctrl_top
+Info (12021): Found 1 design units, including 1 entities, in source file sram_ctrl/sdram_initialization.v
+    Info (12023): Found entity 1: sdram_initialization
+Info (12127): Elaborating entity "sdram_ctrl_top" for the top level hierarchy
+Warning (10034): Output port "Dq" at sdram_ctrl_top.v(17) has no driver
+Warning (10034): Output port "Ba" at sdram_ctrl_top.v(19) has no driver
+Warning (10034): Output port "Dqm" at sdram_ctrl_top.v(26) has no driver
+Info (12128): Elaborating entity "sdram_initialization" for hierarchy "sdram_initialization:sdram_initialization_init"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Dq[0]" is stuck at GND
+    Warning (13410): Pin "Dq[1]" is stuck at GND
+    Warning (13410): Pin "Dq[2]" is stuck at GND
+    Warning (13410): Pin "Dq[3]" is stuck at GND
+    Warning (13410): Pin "Dq[4]" is stuck at GND
+    Warning (13410): Pin "Dq[5]" is stuck at GND
+    Warning (13410): Pin "Dq[6]" is stuck at GND
+    Warning (13410): Pin "Dq[7]" is stuck at GND
+    Warning (13410): Pin "Dq[8]" is stuck at GND
+    Warning (13410): Pin "Dq[9]" is stuck at GND
+    Warning (13410): Pin "Dq[10]" is stuck at GND
+    Warning (13410): Pin "Dq[11]" is stuck at GND
+    Warning (13410): Pin "Dq[12]" is stuck at GND
+    Warning (13410): Pin "Dq[13]" is stuck at GND
+    Warning (13410): Pin "Dq[14]" is stuck at GND
+    Warning (13410): Pin "Dq[15]" is stuck at GND
+    Warning (13410): Pin "Addr[0]" is stuck at GND
+    Warning (13410): Pin "Addr[2]" is stuck at GND
+    Warning (13410): Pin "Addr[3]" is stuck at GND
+    Warning (13410): Pin "Addr[4]" is stuck at GND
+    Warning (13410): Pin "Addr[6]" is stuck at GND
+    Warning (13410): Pin "Addr[7]" is stuck at GND
+    Warning (13410): Pin "Addr[8]" is stuck at GND
+    Warning (13410): Pin "Addr[9]" is stuck at GND
+    Warning (13410): Pin "Addr[11]" is stuck at GND
+    Warning (13410): Pin "Addr[12]" is stuck at GND
+    Warning (13410): Pin "Ba[0]" is stuck at GND
+    Warning (13410): Pin "Ba[1]" is stuck at GND
+    Warning (13410): Pin "Cs_n" is stuck at GND
+    Warning (13410): Pin "Dqm[0]" is stuck at GND
+    Warning (13410): Pin "Dqm[1]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 39 output pins
+    Info (21061): Implemented 45 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 537 megabytes
+    Info: Processing ended: Thu Nov 16 22:02:51 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

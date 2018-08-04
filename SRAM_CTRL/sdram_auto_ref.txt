@@ -1,0 +1,21 @@
+module sdram_auto_ref ( sclk  ,
+                        snrst ,
+						
+						aref_en ,
+						aref_req ,
+						flag_ref_done ,
+						
+						aref_cmd	  ,
+						sram_addr    
+						);
+	input sclk  ;
+	input snrst ;					
+						
+	aref_en  ;					
+	aref_req ;					
+	flag_ref_done ;					
+						
+	output [ 3:0] aref_cmd	  ;					
+	output [12:0] sram_addr   ;					
+
+endmodule
